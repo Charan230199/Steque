@@ -101,7 +101,7 @@ public class Steque<Item> implements Iterable<Item> {
      */
     //time complexity: O(1), space complexity: 0
     public boolean isEmpty() {
-       
+        return size==0;  
     }
     
     /**
@@ -110,6 +110,7 @@ public class Steque<Item> implements Iterable<Item> {
      */
      //time complexity: O(1), space complexity: 0
     public int size() {
+        return size;
        
     }
     
