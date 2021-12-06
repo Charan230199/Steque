@@ -87,6 +87,11 @@ public class Steque<Item> implements Iterable<Item> {
      */
      //time complexity: O(1), space complexity: O(1
     public Item pop() {
+        if(isEmpty()) throw new NoSuchElementException();
+        Item item = stack[size-1];
+        stack[size-1] = null;
+        size--;
+        return item;
         
     }
     
