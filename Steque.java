@@ -75,7 +75,10 @@ public class Steque<Item> implements Iterable<Item> {
      */
       //time complexity: O(1) space complexity: O(n)
     public void push(Item item) {
-       
+        if(item==null) throw new IllegalArgumentException();
+        if(size >= stack.length) resize();
+        stack[size] = item;
+        size++;
     }
     
     /**
